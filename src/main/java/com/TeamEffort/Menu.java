@@ -2,7 +2,7 @@ package com.TeamEffort;
 
 import java.util.Scanner;
 
-public class menu {
+public class Menu {
 
     private static Scanner scanner = new Scanner(System.in);
 
