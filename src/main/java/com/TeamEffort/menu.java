@@ -1,6 +1,8 @@
+package com.TeamEffort;
+
 import java.util.Scanner;
 
-public class Main {
+public class menu {
 
     private static Scanner scanner = new Scanner(System.in);
 
