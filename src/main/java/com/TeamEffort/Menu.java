@@ -8,18 +8,16 @@ public class Menu {
 
     public static void main(String[] args) {
 
-
-
         boolean quit = false;
         printMenu();
-        while (!quit){
+        while (!quit) {
             System.out.println("Welcome to TeamEfforts contact list");
             int input = scanner.nextInt();
             scanner.nextLine();
 
             switch (input) {
                 case 1:
-                    contanctBook.search();
+                    contactBook.search();
                     break;
                 case 2:
                     addNewFriend();
@@ -31,12 +29,26 @@ public class Menu {
                     contactBook.delete();
                     break;
                 case 5:
+                    addFavourite();
+                    break;
+                case 6:
+                    showFavourite();
+                    break;
+                case 7:
+                    contactBook.deleteFavourite();
+                    break;
+                case 8:
                     printMenu();
+                    break;
+                case 9:
+                    System.out.println("Exiting");
+                    quit = true;
                     break;
             }
         }
+    }
 
-        private static void printMenu(){
+        private static void printMenu() {
             System.out.println("\nVälj\n");
             System.out.println(
                     "1 - Search for a friend\n" +
@@ -45,6 +57,4 @@ public class Menu {
                             "4 - Delete a friend\n" +
                             "5 - Show the menu again\n");
         }
-
-    }
 }
