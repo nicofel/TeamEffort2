@@ -3,12 +3,12 @@ package com.domänobjekt;
 import java.util.ArrayList;
 
 public class ContactBook {
-    private String email;
+    private String phoneNumber;
     private ArrayList<Contact> memberContact;
 
     public ContactBook() {
-        this.email = email;
-        this.memberContact = new ArrayList<Contact>()
+        this.phoneNumber = phoneNumber;
+        this.memberContact = new ArrayList<Contact>();
     }
     public boolean addNewContact(Contact contact) {
         if(searchContact(contact.getName())>=0){
@@ -49,7 +49,7 @@ public class ContactBook {
         System.out.println("Member list: ");
         for (int i=0; i<this.memberContact.size(); i++){
             System.out.println(i+1) + " " +
-                    this.memberContact.get(i).getName() + "'s mobile number: " this.memberContact.get(i).mobileNumber();
+                    this.memberContact.get(i).getName() + "'s mobile number: " this.memberContact.get(i).phoneNumber();
         }
     }
 }
