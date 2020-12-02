@@ -28,7 +28,7 @@ public class ContactBook {
         System.out.println(contact.getName() + " has been removed.");
         return true;
     }
-    private int searchContact(Contact contact) {return  this.memberContact.indexOf(contact)}
+    private int searchContact(Contact contact) {return  this.memberContact.indexOf(contact);}
     private int searchContact(String contactName){
         for(int i=0; i<this.memberContact.size(); i++){
             Contact contact = this.memberContact.get(i);

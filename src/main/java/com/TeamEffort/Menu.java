@@ -51,14 +51,20 @@ public class Menu {
         }
     }
 
+
         private static void printMenu() {
             System.out.println("\nVälj\n");
             System.out.println(
-                    "1 - Search for a friend\n" +
-                            "2 - Add new friend\n" +
-                            "3 - Show your friends list\n" +
-                            "4 - Delete a friend\n" +
-                            "5 - Show the menu again\n");
+                    "1 - Search for a contact\n" +
+                            "2 - Add new contact\n" +
+                            "3 - Show your contact list\n" +
+                            "4 - Delete a contact\n" +
+                            "5 - Add contact to favourite\n" +
+                            "6 - Show favourites\n" +
+                            "7 - Delete favourite\n" +
+                            "8 - Show menu\n" +
+                            "9 - Exiting");
+
         }
 
     private static void addNewContact() {
