@@ -60,7 +60,6 @@ public class Menu {
                         "5 - Add contact to favourite\n" +
                         "6 - Show favourites\n" +
                         "7 - Delete favourite\n" +
-                        "8 - Show menu\n" +
                         "9 - Exiting");
 
     }
