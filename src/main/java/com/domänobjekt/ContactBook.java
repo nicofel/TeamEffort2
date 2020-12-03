@@ -20,15 +20,20 @@ public class ContactBook {
         memberContact.add(contact);
         return true;
     }
-    public boolean removeContact(Contact contact) {
-        int positionTrue = searchContact(contact);
-        if(positionTrue <0){
-            System.out.println(contact.getName() + " couldn't be found.");
-            return false;
+
+    private void removeContact(int position) {
+        memberContact.remove(position);
+    }
+    public void removeContact(String item) {
+        int position = searchContact(item);
+        if(position >= 0) {
+            removeContact(position);
+            System.out.println("Contact removed");
         }
-        this.memberContact.remove(positionTrue);
-        System.out.println(contact.getName() + " has been removed.");
-        return true;
+        else{
+            System.out.println("Contact is not in your contactbook");
+        }
+
     }
     private int searchContact(Contact contact) {return  this.memberContact.indexOf(contact);}
     private int searchContact(String contactName){

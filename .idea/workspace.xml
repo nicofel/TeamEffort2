@@ -22,7 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0ec0568b-db06-414e-a013-ba42c796fe24" name="Default Changelist" comment="" />
+    <list default="true" id="0ec0568b-db06-414e-a013-ba42c796fe24" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/TeamEffort/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/TeamEffort/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/domänobjekt/ContactBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/domänobjekt/ContactBook.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +50,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1l673RqgMPczdgbsd1YeAG2TJMQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -112,5 +117,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

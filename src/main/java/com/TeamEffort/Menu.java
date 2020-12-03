@@ -30,7 +30,7 @@ public class Menu {
                     contactBook.printContact();
                     break;
                 case 4:
-                    contactBook.removeContact();
+                    removeContact();
                     break;
                 case 5:
                     addFavourite();
@@ -59,7 +59,7 @@ public class Menu {
                         "4 - Delete a contact\n" +
                         "5 - Add contact to favourite\n" +
                         "6 - Show favourites\n" +
-                        "7 - Delete favourite\n" +
+                        "7 - PrintMenu\n" +
                         "9 - Exiting");
 
     }
@@ -94,5 +94,10 @@ public class Menu {
             System.out.println(searchName + " is not in my contact list. You can add her/him if you like!");
         }
 
+    }
+    public static void removeContact() {
+        System.out.println("Write who you want to remove:");
+        String removeName = scanner.nextLine();
+        contactBook.removeContact(removeName);
     }
 }
