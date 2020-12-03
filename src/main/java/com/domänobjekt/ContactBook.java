@@ -40,18 +40,17 @@ public class ContactBook {
         }
         return -1;
     }
-    public Contact queryContact(String name){
+    public boolean queryContact(String name){
         int position = searchContact(name);
-        if (position >= 0) {
-            return this.memberContact.get(position);
+        if(position >= 0) {
+            return true;
         }
-        return null;
+        return false;
     }
     public void printContact() {
         System.out.println("Member list: ");
         for (int i=0; i<this.memberContact.size(); i++){
-            System.out.println(i+1) + " " +
-                    this.memberContact.get(i).getName() + "'s mobile number: " this.memberContact.get(i).phoneNumber();
+            System.out.println((i+1) + " " + this.memberContact.get(i).getName() + "'s mobile number: " + this.memberContact.get(i).getPhoneNumber());
         }
     }
     public void addFavourite(String favouriteContactName){

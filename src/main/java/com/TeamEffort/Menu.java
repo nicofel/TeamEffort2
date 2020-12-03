@@ -21,27 +21,24 @@ public class Menu {
 
             switch (input) {
                 case 1:
-                    ContactBook.queryContact();
+                    searchContact();
                     break;
                 case 2:
                     addNewContact();
                     break;
                 case 3:
-                    ContactBook.printContact();
+                    contactBook.printContact();
                     break;
                 case 4:
-                    ContactBook.removeContact();
+                    contactBook.removeContact();
                     break;
                 case 5:
                     addFavourite();
                     break;
                 case 6:
-                    showFavourite();
+                    contactBook.printFavouriteContact();
                     break;
                 case 7:
-                    contactBook.deleteFavourite();
-                    break;
-                case 8:
                     printMenu();
                     break;
                 case 9:
@@ -53,20 +50,20 @@ public class Menu {
     }
 
 
-        private static void printMenu() {
-            System.out.println("\nVälj\n");
-            System.out.println(
-                    "1 - Search for a contact\n" +
-                            "2 - Add new contact\n" +
-                            "3 - Show your contact list\n" +
-                            "4 - Delete a contact\n" +
-                            "5 - Add contact to favourite\n" +
-                            "6 - Show favourites\n" +
-                            "7 - Delete favourite\n" +
-                            "8 - Show menu\n" +
-                            "9 - Exiting");
+    private static void printMenu() {
+        System.out.println("\nVälj\n");
+        System.out.println(
+                "1 - Search for a contact\n" +
+                        "2 - Add new contact\n" +
+                        "3 - Show your contact list\n" +
+                        "4 - Delete a contact\n" +
+                        "5 - Add contact to favourite\n" +
+                        "6 - Show favourites\n" +
+                        "7 - Delete favourite\n" +
+                        "8 - Show menu\n" +
+                        "9 - Exiting");
 
-        }
+    }
 
     private static void addNewContact() {
         System.out.println("Skriv in namnet på din kontakt: ");
@@ -74,18 +71,29 @@ public class Menu {
         System.out.println("Skriv in telefonnummer till din kontakt: ");
         String phone = scanner.nextLine();
         System.out.println("Skriv in email adress för din kontakt: ");
-        String email= scanner.nextLine();
+        String email = scanner.nextLine();
         Favourite newContact = new Favourite(name, phone, email);
-        if(ContactBook.addNewContact(newContact)) {
-            System.out.println("Ny kontakt tillagd: Namn: " + name + ", Telefon: "+ phone);
+        if (contactBook.addNewContact(newContact)) {
+            System.out.println("Ny kontakt tillagd: Namn: " + name + ", Telefon: " + phone);
         } else {
             System.out.println("Kan inte lägga till, " + name + " finns redan.");
         }
     }
-    private static void addFavourite(){
+
+    private static void addFavourite() {
         System.out.println("Who do you want to add to favourites? ");
         String favouriteContactName = scanner.nextLine();
         contactBook.addFavourite(favouriteContactName);
     }
 
+    private static void searchContact() {
+        System.out.println("Who are you looking for?: ");
+        String searchName = scanner.nextLine();
+        if (contactBook.queryContact(searchName)) {
+            System.out.println(searchName + " is in my contact list.");
+        } else {
+            System.out.println(searchName + " is not in my contact list. You can add her/him if you like!");
+        }
+
+    }
 }
