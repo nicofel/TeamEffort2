@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Menu {
 
     private static Scanner scanner = new Scanner(System.in);
+    private static ContactBook contactBook = new ContactBook();
 
     public static void main(String[] args) {
 
@@ -80,6 +81,11 @@ public class Menu {
         } else {
             System.out.println("Kan inte lägga till, " + name + " finns redan.");
         }
+    }
+    private static void addFavourite(){
+        System.out.println("Who do you want to add to favourites? ");
+        String favouriteContactName = scanner.nextLine();
+        contactBook.addFavourite(favouriteContactName);
     }
 
 }
