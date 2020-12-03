@@ -15,7 +15,7 @@ public class Menu {
         boolean quit = false;
         printMenu();
         while (!quit) {
-            System.out.println("Welcome to TeamEfforts contact list");
+            System.out.println("Welcome to TeamEfforts contact list (press 7 to show all options)");
             int input = scanner.nextInt();
             scanner.nextLine();
 
@@ -51,7 +51,6 @@ public class Menu {
 
 
     private static void printMenu() {
-        System.out.println("\nVälj\n");
         System.out.println(
                 "1 - Search for a contact\n" +
                         "2 - Add new contact\n" +
@@ -59,23 +58,23 @@ public class Menu {
                         "4 - Delete a contact\n" +
                         "5 - Add contact to favourite\n" +
                         "6 - Show favourites\n" +
-                        "7 - PrintMenu\n" +
-                        "9 - Exiting");
+                        "7 - Show menu again\n" +
+                        "9 - Quit");
 
     }
 
     private static void addNewContact() {
-        System.out.println("Skriv in namnet på din kontakt: ");
+        System.out.println("Add name: ");
         String name = scanner.nextLine();
-        System.out.println("Skriv in telefonnummer till din kontakt: ");
+        System.out.println("Add phone number: ");
         String phone = scanner.nextLine();
-        System.out.println("Skriv in email adress för din kontakt: ");
+        System.out.println("Add email: ");
         String email = scanner.nextLine();
         Favourite newContact = new Favourite(name, phone, email);
         if (contactBook.addNewContact(newContact)) {
-            System.out.println("Ny kontakt tillagd: Namn: " + name + ", Telefon: " + phone);
+            System.out.println("New contact added: Name: " + name + ", Phone: " + phone + ", Email: " + email);
         } else {
-            System.out.println("Kan inte lägga till, " + name + " finns redan.");
+            System.out.println("Can't be added, " + name + " already exists.");
         }
     }
 
