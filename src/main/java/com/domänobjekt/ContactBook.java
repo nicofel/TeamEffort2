@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class ContactBook {
     private String phoneNumber;
     private ArrayList<Contact> memberContact;
+    private ArrayList<Contact> favouriteContact;
 
     public ContactBook() {
         this.phoneNumber = phoneNumber;
         this.memberContact = new ArrayList<Contact>();
+        this.favouriteContact =new ArrayList<Contact>();
     }
     public boolean addNewContact(Contact contact) {
         if(searchContact(contact.getName())>=0){
@@ -52,5 +54,24 @@ public class ContactBook {
                     this.memberContact.get(i).getName() + "'s mobile number: " this.memberContact.get(i).phoneNumber();
         }
     }
+    public void addFavourite(String favouriteContactName){
+        for(int i = 0; i < this.memberContact.size(); i++){
+            Contact newFavouriteContact = this.memberContact.get(i);
+
+            if(newFavouriteContact.getName().equals(favouriteContactName)){
+                favouriteContact.add(newFavouriteContact);
+                System.out.println("Contact" + newFavouriteContact.getName() + "" +
+                        "added in favourites.");
+            }
+        }
+    }
+    public void printFavouriteContact(){
+        System.out.println("Favourite contacts: ");
+        for(int i = 0; i < favouriteContact.size(); i++){
+            System.out.println((i + 1) + "." + this.favouriteContact.get(i).getName() +
+                    ": " + "\tMobile number: " + this.favouriteContact.get(i).getPhoneNumber());
+        }
+    }
+
 }
 
