@@ -13,4 +13,10 @@ class ContactTest {
     @Test
     void getPhoneNumber() {
     }
+
+    @Test
+    void testTestContactNotNull(){
+        Contact TestContact = new Contact("name","phoneNumber");
+        assertNotNull(TestContact);
+    }
 }
