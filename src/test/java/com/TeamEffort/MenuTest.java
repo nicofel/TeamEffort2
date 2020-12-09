@@ -1,21 +1,30 @@
 package com.TeamEffort;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MenuTest {
 
-    @BeforeAll
+   @BeforeAll
     public static void BeforeAll(){
         System.out.println("Starting test");
-    }
+   }
 
 @Test
-    public static void Test(){
-    System.out.println("Test");
+    public void searchContact() {
+    Assertions.assertThrows(NumberFormatException.class, () -> {
+        Integer.parseInt("One");
+    });
+    System.out.println("The test passed");
 }
+       //menuTest.searchContact();
+       //System.out.println("Test");
+
+/*@Test
+    void addNewContact(){
+   System.out.println("Test");
+}*/
 
 
 }

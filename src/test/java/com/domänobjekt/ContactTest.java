@@ -7,10 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class ContactTest {
 
     @Test
-    void getName() {
-    }
-
-    @Test
-    void getPhoneNumber() {
+    void testTestContactNotNull(){
+        Contact TestContact = new Contact("name","phoneNumber");
+        assertNotNull(TestContact);
     }
 }
