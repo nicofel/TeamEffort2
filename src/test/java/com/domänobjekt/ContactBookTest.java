@@ -3,6 +3,7 @@ package com.domänobjekt;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -62,4 +63,24 @@ import static org.junit.jupiter.api.Assertions.*;
             ArrayList<Contact> foundContacts = contactBook.getListOfContacts();
             assertEquals("Kalle",contactBook.printContact());
         }
+
+        @Test
+        void addFavourite_thenVerifyFavouriteIsAdded(){
+            Contact contact7 = new Contact("Mia", "031-000004");
+            Contact contact8 = new Contact("Carl", "031-000005");
+            Contact contact9 = new Contact("Hans", "031-000006");
+
+            ContactBook contactBook = new ContactBook();
+            contactBook.addFavourite(contact7.getName());
+            contactBook.addFavourite(contact8.getName());
+            contactBook.addFavourite(contact9.getName());
+
+            List<Contact> addedFavourites = new ArrayList<>();
+            addedFavourites.add(contact7);
+            addedFavourites.add(contact8);
+            addedFavourites.add(contact9);
+            List<Contact> foundContacts = contactBook.getListOfFavourites();
+            assertEquals(7, addedFavourites.size());
+        }
+
     }

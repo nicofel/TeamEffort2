@@ -6,9 +6,8 @@ public class ContactBook {
     private String phoneNumber;
     private ArrayList<Contact> memberContact;
     private ArrayList<Contact> favouriteContact;
-    public ArrayList getListOfContacts() {
-        return memberContact;
-    }
+    public ArrayList getListOfFavourites() {return favouriteContact;}
+    public ArrayList getListOfContacts() {return memberContact;}
 
     public ContactBook() {
         this.phoneNumber = phoneNumber;
