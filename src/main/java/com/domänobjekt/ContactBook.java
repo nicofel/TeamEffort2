@@ -31,12 +31,11 @@ public class ContactBook {
         int position = searchContact(item);
         if(position >= 0) {
             removeContact(position);
-            System.out.println("Contact removed");
+            //System.out.println("Contact removed");
         }
         else{
             System.out.println("Contact is not in your contactbook");
         }
-
     }
     private int searchContact(Contact contact) {return  this.memberContact.indexOf(contact);}
     private int searchContact(String contactName){
