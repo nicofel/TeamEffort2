@@ -54,11 +54,14 @@ public class ContactBook {
         }
         return false;
     }
-    public void printContact() {
-        System.out.println("Member list: ");
+    public String printContact() {
+        System.out.println("Contact list: ");
+        String print = "";
         for (int i=0; i<this.memberContact.size(); i++){
             System.out.println((i+1) + " " + this.memberContact.get(i).getName() + "'s mobile number: " + this.memberContact.get(i).getPhoneNumber());
+            print = this.memberContact.get(i).getName();
         }
+        return print;
     }
     public void addFavourite(String favouriteContactName){
         for(int i = 0; i < this.memberContact.size(); i++){

@@ -52,4 +52,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
             assertTrue(contactBook.queryContact(contact3.getName()));
         }
+
+        @Test
+        void printContact_thenVerifyContactIsPrinted() {
+            Contact contact1 = new Contact("Kalle", "031-000000");
+            ContactBook contactBook = new ContactBook();
+            contactBook.addNewContact(contact1);
+            contactBook.printContact();
+            ArrayList<Contact> foundContacts = contactBook.getListOfContacts();
+            assertEquals("Kalle",contactBook.printContact());
+        }
     }
