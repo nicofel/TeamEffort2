@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ContactTest {
+public class ContactTest {
 
     @Test
-    void testTestContactNotNull(){
+    public void testTestContactNotNull(){
         Contact TestContact = new Contact("name","phoneNumber");
         assertNotNull(TestContact);
     }
