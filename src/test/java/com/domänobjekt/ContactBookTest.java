@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
     public class ContactBookTest {
         @Test
-        void deleteContact_thenVerifyContactIsDeleted() {
+        public void testDeleteContact_thenVerifyContactIsDeleted() {
             Contact contact1 = new Contact("Mia", "031-000001");
             Contact contact2 = new Contact("Klaus", "031-000002");
             Contact contact3 = new Contact("Vera", "031-000003");
@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         @Test
-        void addContact_thenVerifyContactIsAdded(){
+        public void testAddContact_thenVerifyContactIsAdded(){
             Contact contact4 = new Contact("Linus", "031-000004");
             Contact contact5 = new Contact("Sofia", "031-000005");
             Contact contact6 = new Contact("Hasse", "031-000006");
@@ -38,7 +38,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         @Test
-        void search_thenVerifyContactIsFound(){
+        public void testSearch_thenVerifyContactIsFound(){
             Contact contact1 = new Contact("Moa", "123456678");
             Contact contact2 = new Contact("Kayca", "234456");
             Contact contact3 = new Contact("Fanny", "4534534534");
@@ -55,7 +55,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         @Test
-        void printContact_thenVerifyContactIsPrinted() {
+        public void testPrintContact_thenVerifyContactIsPrinted() {
             Contact contact1 = new Contact("Kalle", "031-000000");
             ContactBook contactBook = new ContactBook();
             contactBook.addNewContact(contact1);
@@ -65,7 +65,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         @Test
-        void addFavourite_thenVerifyFavouriteIsAdded(){
+        public void testAddFavourite_thenVerifyFavouriteIsAdded(){
             Contact contact7 = new Contact("Mia", "031-000004");
             Contact contact8 = new Contact("Carl", "031-000005");
             Contact contact9 = new Contact("Hans", "031-000006");
@@ -80,7 +80,7 @@ import static org.junit.jupiter.api.Assertions.*;
             addedFavourites.add(contact8);
             addedFavourites.add(contact9);
             List<Contact> foundContacts = contactBook.getListOfFavourites();
-            assertEquals(7, addedFavourites.size());
+            assertEquals(3, addedFavourites.size());
         }
 
     }

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ContactTest {
 
     @Test
-    void testTestContactNotNull(){
+    public void testTestContactNotNull(){
         Contact TestContact = new Contact("name","phoneNumber");
         assertNotNull(TestContact);
     }
